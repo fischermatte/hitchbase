@@ -1,0 +1,9 @@
+<?php
+
+
+system( "/usr/bin/pdflatex ./tex2pdf/texdatei.tex" );
+
+
+
+
+?>

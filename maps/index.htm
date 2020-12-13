@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1"/>
+    <title>Google Maps JavaScript API Example</title>
+    <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAA-5Ifo-qiA1IXj01UpE946hRYSZYwoBUBoYLaknVhwotnGt1QuxSnpiDrLJfJYR84JrBaKv-szkWMKw"
+      type="text/javascript"></script>
+    <script type="text/javascript">
+
+    //<![CDATA[
+
+    function load() 
+	{
+      if (GBrowserIsCompatible()) 
+	  {
+        var map = new GMap2(document.getElementById("map"));
+        map.setCenter(new GLatLng(37.4419, -122.1419), 13);
+		map.addControl(new GSmallMapControl());
+		map.addControl(new GMapTypeControl());
+		map.setCenter(new GLatLng(51.179045, -1.826752), 14); 
+
+		var point = new GLatLng(51.17904, -1.826752);
+		var marker = new GMarker(point);
+  		GEvent.addListener(marker, "click", function() 
+		{
+   			var content = "<h1>Stonehenge, England</h1><p>Stonehenge was built around 2500B</p>";
+    		content += "<a href='http://www.example.com?view=abc&state=123'>Link to Maps API Version</a>";
+    		marker.openInfoWindowHtml(content);
+  		});
+ 		map.addOverlay(marker);
+	  }
+    }
+
+    //]]>
+    </script>
+  </head>
+  <body onload="load()" onunload="GUnload()">
+    <div id="map" style="width: 500px; height: 300px"></div>
+  </body>
+</html>

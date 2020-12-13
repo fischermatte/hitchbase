@@ -1,0 +1,6 @@
+# BASIC BLOCK - Note you may need AuthDigestFile instead of AuthUserFile
+AuthType Basic
+AuthName "Please Log In"
+# AuthUserFile C:/Users/Georg/Development/Wamp/www/hitchbase/access/.htpasswd
+AuthUserFile /www/htdocs/agrajag/access/.htpasswd
+Require user hitchbase

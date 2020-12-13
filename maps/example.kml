@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<kml xmlns="http://earth.google.com/kml/2.1">
+<Placemark>
+  <name>Stonehenge, England</name>
+  <description>Stonehenge was built around 2500BC</description>
+  <Point>
+	<coordinates>-1.826752,51.179045,0 </coordinates>
+  </Point>
+</Placemark>
+</kml>
